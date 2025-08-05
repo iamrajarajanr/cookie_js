@@ -7,51 +7,57 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
     </head>
 
-    <body>        
+    <body>
         <header>
             <img src="NASA.png">
         </header>
         <main>
             <form>
               <label for="astronautName">Choose a username</label>
-                <input 
+                <input
                     required
-                    type="text" 
-                    id="astronautName" 
+                    type="text"
+                    id="astronautName"
                     name="astronautName"
                     placeholder="Neil Armstrong"
+                    minlength="2"
+                    maxlength="8"
+
                     >
               <label for="astronautName">How old are you?</label>
 <!-- Challenge:
-1. Use 'min' and 'max' to make sure that only ages of 
+1. Use 'min' and 'max' to make sure that only ages of
    21 and over and 120 and under can be inputted.
   -->
-                <input 
+                <input
                     required
-                    type="number" 
-                    id="astronautAge" 
+                    type="number"
+                    id="astronautAge"
                     name="astronautAge"
                     placeholder="21"
+                    min="18"
+                    max="50"
                     >
               <label for="astronautName">Country Code</label>
 <!-- Challenge:
-1. Make sure users can only input a 3 character country 
-   code. These can be lower or upper case but exactly 
+1. Make sure users can only input a 3 character country
+   code. These can be lower or upper case but exactly
    3 characters in length and no special characters or
    numbers.
-   
+
    USA, FRA, GBR, SWE ✅
-   US, UK, AB1, !USA ❌ 
+   US, UK, AB1, !USA ❌
   -->
-                <input 
+                <input
                     required
-                    type="text" 
-                    id="astronautCountryCode" 
+                    type="text"
+                    id="astronautCountryCode"
                     name="astronautCountryCode"
                     placeholder="Fra"
-                    > 
+                    pattern="a-zA-z{3}"
+                    >
                 <button type="submit">submit</button>
-            </form>    
+            </form>
         </main>
         <script src="index.js"></script>
     </body>
